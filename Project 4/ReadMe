@@ -1,0 +1,11 @@
+The P4Model.slx Simulink model combines the lateral (Project 2) and longitudinal (Project 3) models into a single electric vehicle. The goal of the simulation is to 
+run the vehicle around the racetrack as fast as possible and for as many laps as possible within a 3600 sec simulation time.
+Begin by running Project2init.m script. This script creates the track using a series of piecewise functions that define the x and y coordinates to be plotted. 
+Next, run the P4init.m script. This script initializes simulation parameters, vehicle parameters, gear ratio information, dynamic information, electric motor data,
+and battery data.
+Next, open the P4Model.slx Simulink Model. Press the green run button within the Simulation tab in Simulink and wait for the simulation to terminate. Checking the XY graph allows you to visualize the path of the car
+around the track. Sometimes the points do not show up, so closing the model, deleting the cache, then reopening the model and runing again fixes this.
+Next, run the StatsScript.m script. This script creates the track path for the raceStat function input, performs the simulation, extracts simulation data, and then calls the
+raceStat function. "stats" will populate the workspace, which provides information on how many loops were completed, the time it took to complete each loop, the occurences when the car
+left the track, the min, max, and final state of charge, and an indication of brake violation. After my Simulation, the EV was able to complete 10 laps without leaving the track, the min SOC
+was 79.82%, the max SOC was 80%, the final SOC was 79.82%, and the brake violation did occur. 
